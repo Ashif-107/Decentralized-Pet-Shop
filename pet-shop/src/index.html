@@ -101,48 +101,58 @@
       background: rgb(131, 58, 180);
       background: radial-gradient(circle, rgba(131, 58, 180, 1) 0%, rgba(29, 253, 228, 1) 33%, rgba(252, 69, 230, 1) 100%);
     }
+
     .ti {
-  font-family: 'Calligraffitti', cursive;
-  font-weight: 700;
-  font-size: 6rem; /* Adjusted font size */
-  position: absolute;
-  text-shadow: -15px 5px 20px #ced0d3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #F9f1cc;
-  text-shadow: 5px 5px 0px #FFB650, 
-    10px 10px 0px #FFD662, 
-    15px 15px 0px  #FF80BF, 
-    20px 20px 0px #EF5097, 
-    25px 25px 0px #6868AC, 
-    30px 30px 0px #90B1E0;
+      font-family: 'Calligraffitti', cursive;
+      font-weight: 700;
+      font-size: 6rem;
+      /* Adjusted font size */
+      position: absolute;
+      text-shadow: -15px 5px 20px #ced0d3;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      letter-spacing: 0.02em;
+      text-align: center;
+      color: #F9f1cc;
+      text-shadow: 5px 5px 0px #FFB650,
+        10px 10px 0px #FFD662,
+        15px 15px 0px #FF80BF,
+        20px 20px 0px #EF5097,
+        25px 25px 0px #6868AC,
+        30px 30px 0px #90B1E0;
 
-  
-}
-.r1{
-  margin-bottom: 12rem;
-  margin-top: 6rem;
-}
-.card{
-  transition: ease-in-out 0.3s;
-  background: #E6D8C0;
-}
-.card:hover{
-  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-}
 
-.foot{
-  margin-top: 3rem;
-  color: #111;
-  font-size: 2rem;
-}
-.foot a{
-  text-decoration: none;
-  color: #111;
-}
+    }
+
+    .r1 {
+      margin-bottom: 12rem;
+      margin-top: 6rem;
+    }
+
+    .card {
+      transition: ease-in-out 0.3s;
+      background: #E6D8C0;
+    }
+
+    .card:hover {
+      box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+    }
+
+    .foot {
+      margin-top: 3rem;
+      color: #111;
+      font-size: 2rem;
+    }
+
+    .foot a {
+      text-decoration: none;
+      color: #111;
+    }
+
+    .accn{
+      color: black;
+    }
   </style>
 </head>
 
@@ -152,7 +162,14 @@
       <div class="col-xs-12 col-sm-8 col-sm-push-2">
         <h1 class="ti">Decentralized Pet Shop</h1>
         <br />
+
       </div>
+
+    </div>
+    <div class="acc">
+
+      <h3 class="accn">Account No: </h3>
+      <h4 id="account-no" class="accn"></h4>
     </div>
     <hr />
 
@@ -178,24 +195,24 @@
 
 
 
-    <div id="petTemplate" style="display: none;" class="">
-      <div class="col-sm-6 col-md-4 col-lg-3 ">
-        <div class="panel panel-default panel-pet card">
-          <div class="panel-heading" style="background: #E6D8C0;">
-            <h3 class="panel-title" style="font-size: 2.5rem;">Scrappy</h3>
-          </div>
-          <div class="panel-body">
-            <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;"
-              src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
-            <br /><br />
-            <strong>Breed</strong>: <span class="pet-breed">Golden Retriever</span><br />
-            <strong>Age</strong>: <span class="pet-age">3</span><br />
-            <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br /><br />
-            <button class="btn-adopt button-85" type="button" data-id="0">Adopt</button>
-          </div>
+  <div id="petTemplate" style="display: none;" class="">
+    <div class="col-sm-6 col-md-4 col-lg-3 ">
+      <div class="panel panel-default panel-pet card">
+        <div class="panel-heading" style="background: #E6D8C0;">
+          <h3 class="panel-title" style="font-size: 2.5rem;">Scrappy</h3>
+        </div>
+        <div class="panel-body">
+          <img alt="140x140" data-src="holder.js/140x140" class="img-rounded img-center" style="width: 100%;"
+            src="https://animalso.com/wp-content/uploads/2017/01/Golden-Retriever_6.jpg" data-holder-rendered="true">
+          <br /><br />
+          <strong>Breed</strong>: <span class="pet-breed">Golden Retriever</span><br />
+          <strong>Age</strong>: <span class="pet-age">3</span><br />
+          <strong>Location</strong>: <span class="pet-location">Warren, MI</span><br /><br />
+          <button class="btn-adopt button-85" type="button" data-id="0">Adopt</button>
         </div>
       </div>
     </div>
+  </div>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

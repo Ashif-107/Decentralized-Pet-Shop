@@ -2,6 +2,13 @@ App = {
   web3Provider: null,
   contracts: {},
 
+  loadAccounts: async () => {
+    // connect to all the accounts, we want index 0 since, its the first account
+    // the account we are connected to
+    App.account = await ethereum.request({ method: 'eth_accounts' });
+    $('#account-no').html(App.account[0])
+},
+
   init: async function () {
     // Load pets.
     $.getJSON('../pets.json', function (data) {
@@ -59,6 +66,8 @@ App = {
 
       // Use our contract to retrieve and mark the adopted pets
       return App.markAdopted();
+
+      
     });
 
 
@@ -79,7 +88,7 @@ App = {
     }).then(function (adopters) {
       for (i = 0; i < adopters.length; i++) {
         if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-          $('.panel-pet').eq(i).find('button').text('Adopted').attr('disabled', true).addClass("btn-adopted").removeClass("button-85");
+          $('.panel-pet').eq(i).find('button').text('Adopted').attr('disabled', true).addClass("btn-adopted");
         }
       }
     }).catch(function (err) {
@@ -120,5 +129,6 @@ App = {
 $(function () {
   $(window).load(function () {
     App.init();
+    App.loadAccounts()
   });
 });
